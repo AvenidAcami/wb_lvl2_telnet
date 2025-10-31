@@ -32,7 +32,7 @@ var telnetCmd = &cobra.Command{
 func init() {
 	rootCmd.AddCommand(telnetCmd)
 
-	telnetCmd.Flags().StringVarP(&host, "host", "h", "", "адрес TCP-сервера")
+	telnetCmd.Flags().StringVarP(&host, "host", "s", "", "адрес TCP-сервера")
 	telnetCmd.Flags().StringVarP(&port, "port", "p", "", "порт")
 	telnetCmd.Flags().IntVarP(&timeout, "timeout", "t", 10, "таймаут (по умолчанию 10 секунд)")
 }
