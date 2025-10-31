@@ -19,7 +19,7 @@ func Connect(host, port string, timeout int) error {
 	if err != nil {
 		return err
 	}
-
+	io.Copy(os.Stdout, conn)
 	scanner := bufio.NewScanner(os.Stdin)
 	defer conn.Close()
 
